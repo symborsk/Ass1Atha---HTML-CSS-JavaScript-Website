@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Fri Sep 22 2017 23:52:56 GMT-0600 (MDT) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="Categories">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="ContactInfo">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Name" type="xs:string"></xs:element>
+                                             <xs:element name="Address" type="xs:string"></xs:element>
+                                             <xs:element name="PhoneNumber" type="xs:int"></xs:element>
+                                             <xs:element name="Email" type="xs:string"></xs:element>
+                                             <xs:element name="GitHub" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="UniversityStatus">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Program" type="xs:string"></xs:element>
+                                             <xs:element name="GraduateYear" type="xs:int"></xs:element>
+                                             <xs:element name="GPA" type="xs:double"></xs:element>
+                                             <xs:element name="TermsCompleted" type="xs:string"></xs:element>
+                                             <xs:element name="CoopTermsCompleted" type="xs:string"></xs:element>
+                                             <xs:element name="LengthsForNextWorkTerm">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Length" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="ComputerSkills">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="ComputerSkill" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="ProgrammingLanguages">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="ProficientLanguages">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ProficientLanguage" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="CompetentLanguages">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="CompetentLanguage" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="FamiliarLanguages">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="FamiliarLanguage" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="WorkExperience">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Job" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="JobTitle" type="xs:string"></xs:element>
+                                                               <xs:element name="Company" type="xs:string"></xs:element>
+                                                               <xs:element name="City" type="xs:string"></xs:element>
+                                                               <xs:element name="StartDate" type="xs:string"></xs:element>
+                                                               <xs:element name="EndDate" type="xs:string"></xs:element>
+                                                               <xs:element name="JobResponsibilities">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Responsibility" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Scholarships">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Scholarship" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ScholarshipName" type="xs:string"></xs:element>
+                                                               <xs:element name="ScholarshipYear" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Interests">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Interest" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Misclaneous">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="MiscalaneousPoint" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 

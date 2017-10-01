@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="resume.xsl"?>
+
+<Categories>
+	
+	<ContactInfo>
+		<Name>John Symborski</Name>
+		<Address>23 10987 127th Street NW, Edmonton AB, T5M0T1</Address>
+		<PhoneNumber>4037152942</PhoneNumber>
+		<Email>symborsk@ualberta.ca</Email>
+		<GitHub>http://github.com/symborsk</GitHub>
+	</ContactInfo>
+
+
+	<UniversityStatus>
+		<Program>Computer Engineering B Sc</Program>
+		<GraduateYear>2018</GraduateYear>
+		<GPA>3.4</GPA>
+		<TermsCompleted>7/8</TermsCompleted>
+		<CoopTermsCompleted>3/5</CoopTermsCompleted>
+		<Length_For_Next_Work_Term>4 or 8 Months</Length_For_Next_Work_Term>
+	</UniversityStatus>
+
+	
+	<ComputerSkills>
+		<ComputerSkill>Experience with project development and testing on Visual Studio, Eclipse and Android Studio</ComputerSkill>
+		<ComputerSkill>Lab experience designing and running VHDL code on FPGAs</ComputerSkill>
+		<ComputerSkill>Group project experience using Adruino microprocessors</ComputerSkill>
+		<ComputerSkill>Experience using version control software Git and TFS</ComputerSkill>
+		<ComputerSkill>Experience with Linux and Windows operating systems</ComputerSkill>
+		<ComputerSkill> Experience with Microsoft Word, Excel, Powerpoint and open source equivalents.</ComputerSkill>
+	</ComputerSkills>
+
+
+	
+	<ProgrammingLanguages>
+		<ProficientLanguages>
+			<ProficientLanguage>C</ProficientLanguage>
+			<ProficientLanguage>C++</ProficientLanguage>
+			<ProficientLanguage>Python</ProficientLanguage>
+			<ProficientLanguage>Java</ProficientLanguage>
+		</ProficientLanguages>
+		<CompetentLanguages>
+			<CompetentLanguage>SQL</CompetentLanguage>
+			<CompetentLanguage>Android</CompetentLanguage>
+			<CompetentLanguage>MFC</CompetentLanguage>
+			<CompetentLanguage>VHDL</CompetentLanguage>
+		</CompetentLanguages>
+		<FamiliarLanguages>
+			<FamiliarLanguage>MATLAB</FamiliarLanguage>
+			<FamiliarLanguage>Assembly Language</FamiliarLanguage>
+			<FamiliarLanguage>C#/.net</FamiliarLanguage>
+		</FamiliarLanguages>
+	</ProgrammingLanguages>
+	
+
+	<WorkExperience>
+		<Job>
+			<Job_Title>User Interface Software Development Intern</Job_Title>
+			<Company>Subnet Solutions Inc.</Company>
+			<City>Edmonton, AB</City>
+			<Start_Date>2016/01/01</Start_Date>
+			<End_Date>2016/09/01</End_Date>
+			<Job_Responsibilities>
+				<Responsibility>Designed various GUI components using Visual C++ and MFC</Responsibility>
+				<Responsibility>Debugged project code and project linking issues in Microsoft Visual Studio</Responsibility>
+				<Responsibility>Wrote unit tests for various components using CppUnit.</Responsibility>
+				<Responsibility>Met for daily scrum meeting with a team of 7-10 other people and followed agile software development format</Responsibility>
+				<Responsibility>Produced code documentation and ran performance profiler on existing code</Responsibility>
+			</Job_Responsibilities>
+		</Job>
+		<Job>
+			<Job_Title>Computer Repair Technician </Job_Title>
+			<Company>Computer for Schools Alberta</Company>
+			<City>Edmonton, AB</City>
+			<Start_Date>2015/05/01</Start_Date>
+			<End_Date>2015/09/01</End_Date>
+			<Job_Responsibilities>
+				<Responsibility>Refurbished various models of computers and laptops for Albertan schools, recorded information in database</Responsibility>
+				<Responsibility>Worked on large orders with 5 other engineering students to ship large orders of computer, mice, keyboards, printers and laptops.</Responsibility>
+				<Responsibility>Created, formatted and uploaded windows images to a server.</Responsibility>
+				<Responsibility>Met for daily scrum meeting with a team of 7-10 other people and followed agile software development format</Responsibility>
+				<Responsibility>Troubleshot and repaired various hardware and software issues on desktop computers, laptops and printers.code</Responsibility>
+			</Job_Responsibilities>
+		</Job>	
+	</WorkExperience>
+	
+	<Scholarships>
+		<Scholarship>
+			<ScholarshipName>Jason Lang Scholarship</ScholarshipName>
+			<ScholarshipYear>2014-2015</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName>Telus Leadership Family Scholarship,</ScholarshipName>
+			<ScholarshipYear>2013</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName>University of Alberta Academic Scholarship</ScholarshipName>
+			<ScholarshipYear>2013</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName>Faculty of Engineering Academic Excellence Scholarship</ScholarshipName>
+			<ScholarshipYear>2013</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName>Craighton Twa Engineering Academic Excellence Scholarship</ScholarshipName>
+			<ScholarshipYear>2013</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName>Alexander Rutherford</ScholarshipName>
+			<ScholarshipYear>2011-2013</ScholarshipYear>
+		</Scholarship>
+		<Scholarship>
+			<ScholarshipName> St. Martha''s Catholic Parish Volunteer Award</ScholarshipName>
+			<ScholarshipYear>2013</ScholarshipYear>
+		</Scholarship>
+	</Scholarships>
+	
+	<Interests>
+		<Interest>Participated in competitive Hockey for 10 years</Interest>
+		<Interest>Play guitar and sing</Interest>
+		<Interest>Played golf for 5 years and participated in golf academy at my High School in grade 11</Interest>
+		<Interest>Regularly rock climb and boulder</Interest>
+		<Interest>Hiking and camping during the summer months</Interest>
+	</Interests>
+	
+	<Misclaneous>
+		<MiscalaneousPoint>Class 5 Driver''s License </MiscalaneousPoint>
+	</Misclaneous>
+
+</Categories>

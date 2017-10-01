@@ -1,0 +1,62 @@
+/* tma1_style.css */
+
+img {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 3px;
+    width: 207px;
+    height: 200px;
+   	margin: auto;
+}
+
+h1 {
+    text-align: center;
+   	color: 	#DCDCDC;
+    font-family: 'Abril Fatface';
+} 
+h2 {
+    color: #DCDCDC;
+    text-decoration-color: white;
+    text-align: center;
+} 
+h3 {
+	color: #DCDCDC;
+    text-decoration-color: white;
+    text-align: center;
+} 
+h4{
+	color: #DCDCDC;
+    text-decoration-color: white;
+    text-align: center;
+}
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #DCDCDC;
+}
+lh {  
+	display: block;
+    padding: 16px 16px;
+    color: ##FFFFFF;
+    background-color: #2F4F4F;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 32px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: #DCDCDC;
+}
+
+body{
+	 color: #FFFFFF;
+	background-color: #000000;
+}
