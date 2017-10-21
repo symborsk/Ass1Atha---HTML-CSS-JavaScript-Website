@@ -1,62 +1,66 @@
 /* tma1_style.css */
 
-img {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 3px;
-    width: 207px;
-    height: 200px;
-   	margin: auto;
-}
-
 h1 {
-    text-align: center;
-   	color: 	#DCDCDC;
-    font-family: 'Abril Fatface';
+    text-align: left;
+    font-size: 36px;
+    color: #373737;
 } 
 h2 {
-    color: #DCDCDC;
-    text-decoration-color: white;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px; 
+    color: #C0B283;
 } 
 h3 {
-	color: #DCDCDC;
-    text-decoration-color: white;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px; 
+    color: #C0B283;
 } 
 h4{
-	color: #DCDCDC;
-    text-decoration-color: white;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px; 
+    color: #C0B283;
 }
-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    background-color: #DCDCDC;
+
+p{
+    color: #373737;
+    margin-left: 75px; 
 }
-lh {  
-	display: block;
-    padding: 16px 16px;
-    color: ##FFFFFF;
-    background-color: #2F4F4F;
+
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #373737; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 25%; 
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: #F4F4F4; /* White text color */
+    font-size: 36px; /* Increased font size */
     text-decoration: none;
 }
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 32px;
-    text-decoration: none;
+.icon-bar a:hover {
+    background-color: #C0B283; /* Add a hover color */
 }
 
-li a:hover {
-    background-color: #555;
-    color: #DCDCDC;
+.active {
+    background-color: #DCD0C0; /* Add an active/current color */
+}
+
+.icon-3737image-group{
+    float: right;
+}
+
+header{
+    color: #373737;
+    background-color: #F4F4F4;
 }
 
 body{
-	 color: #FFFFFF;
-	background-color: #000000;
+    color: #DCD0C0;
+    background-color: #F4F4F4;
 }

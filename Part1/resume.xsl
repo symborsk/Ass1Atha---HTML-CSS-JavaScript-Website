@@ -3,8 +3,7 @@
 <xsl:output method="html" indent="yes" omit-xml-declaration="yes"/>
 	
 	<xsl:template match="ContactInfo">
-	  	<html>
-	  		<link rel = "stylesheet" type = "text/css" href="../Shared/tma1_style.css"/>  		
+	  	<html>	
 	  		<body> 
 				<h1>John Symborski's Resume</h1>
 				<h2>Contact Info</h2>			

@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 
 <html>
-
+<head>
 
 <title>Webpage John Symborski</title>
 <link href="Shared/tma1_style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="resume.js"></script>
 
-<head>
-    <h1 >  
-    Assignment #1 COMP 466 
-    <h2>
-    Advanced Technologies for Web-Based Systems
-    </h2>
-    </h1>
-    <h3>
-    By: John Symborski <br> StudentId: 33339305 
-    </h3>
-    <h4>
-    Date Started: Sunday July 23rd 2017<br>
-    Date Ended: TBD <br>
-    Hours Spent: TBD
-    </h5>
 </head>
 
 <body>
-<nav>
-	<lh>John Symborski's Website</lh>
-    <li><a href="Part1/resume.xml">My Resume</a></li>
-  	<li><a href="default.asp">Turtorials</a></li>
-  	<li><a href="about.asp">About</a></li>
-</nav>
+
+    <div class ="icon-image-group">
+        <img src=Shared/css.png alt = "Image of CSS on a background">
+        <img src=Shared/javascript.png alt = "Image of javascript on a background">
+        <img src=Shared/html.png alt = "Image of html on a background"> 
+    </div>
+
+    <header id="header">
+    <h1>  
+    Assignment #1 COMP 466
+    </h1>
+    <h2>
+    Advanced Technologies for Web-Based Systems
+    </h2> 
+    <h3>
+    John Symborski, 33339305 
+    </h3>
+    <h4>
+    July 23rd 2017 - TBD  Hours Spent: TBD
+    </h4>
+</header>
+
+<div class="icon-bar">
+    <a id="home" class="active" href="#"><i class="fa fa-home"></i></a> 
+    <a id="resume">My Resume</a>
+    <a href="default.asp">Tutorials</a>
+    <a href="about.asp">About</a>
+</div>
+<div id=contentWindow>
+</div>
+
 </body>
 
 </html>
