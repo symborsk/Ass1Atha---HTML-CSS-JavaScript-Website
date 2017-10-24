@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TutorialDetails>
+<Section Type="FigureExplanation">
+	<Header>HTML Tags</Header>
+	<IMGPath>IMG/htmlTags.png</IMGPath>
+	<Explanation>
+		Most elements inside of HTML document have a start tag and end tag. These tags start are put inside of angle brackets and the end tag has a forward slah inside
+		of the angle bracket. The exception to this rule are void element that only have start tags but no end tags. An example of this is img tag. Attributes inside of these tags can be to describe 
+		speicfic qualities of elements. The tags themselves describe the behaviour of the element for example "p" tag would be used for a paragraph whilst the img tag
+		would be used for an image.
+	</Explanation>
+</Section>
+<Section Type="List">
+	<Header>Html Page Structure Elements</Header>
+	<ListItems>
+		<Item>Header Element: Used to describe the header area of the page, it often contains one or more heading tags (h1 to h6)</Item>
+		<Item>Footer Element: Used to descrbe the footer area at the bottom of the page. It will often contain other elements inside it.</Item>
+		<Item>Nav Element: This element describes the navigation part of the page. This will typically contain buttons or other elements that allow the 
+			user to navigate the website</Item>
+		<Item>Section Element: This essentially marks a section of a page. It is suppose to be used to group together elements that contain some type of relationgship</Item>
+		<Item>Aside Element: Used to describe content that is related to another item. Displays information that is related but not a main detail.</Item>
+	</ListItems>
+	<Conclusion> These structure element are used in Html5 to provide developers with a cleaner way to layout their page.</Conclusion>
+</Section>
+
+</TutorialDetails> 
