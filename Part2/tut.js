@@ -43,6 +43,12 @@ function loadTutorialInfo(xml)
 				var listItems = currentSection.getElementsByTagName("Item");
 				var conclusion = currentSection.getElementsByTagName("Conclusion")[0].childNodes[0].nodeValue;
 				addList(header,listItems,conclusion);
+				break;
+			case "FigureCaption":
+				var cap = currentSection.getElementsByTagName("Caption")[0].childNodes[0].nodeValue;
+				var imgPathCaption = currentSection.getElementsByTagName("IMGPath")[0].childNodes[0].nodeValue;
+				addFigureCaption(cap, imgPathCaption)
+				break;
 		}
 	}
 }
@@ -76,6 +82,15 @@ function addList(header,listItems, conclusion){
 	}
 	
 	sec += "</ul><aside>" + conclusion +"</aside></div>";
+
+	document.getElementById("contentWindow").innerHTML += sec;
+}
+
+function addFigureCaption(caption, imgPath)
+{
+	var sec = "<div class=figureCaption>";
+	sec += "<img src=" +imgPath+ " alt=\"self-validation inputs\">";
+	sec += "<figcaption>" + caption + "</figcaption></div>"
 
 	document.getElementById("contentWindow").innerHTML += sec;
 }
