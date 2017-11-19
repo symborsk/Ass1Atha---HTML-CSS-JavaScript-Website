@@ -1,5 +1,5 @@
 
-function registerNavigationPane()
+function registerTutNavigationPane()
 {
 	document.getElementById("unit1Tut").addEventListener("click", onClick_Unit1Tut, false);
 }
@@ -157,4 +157,4 @@ function setActiveButton(btn)
 	}
 }
 
-window.addEventListener("load", registerNavigationPane, false)
+window.addEventListener("load", registerTutNavigationPane, false)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuizDetails>
+	<Question Type="MultipleChoice">
+		<Question>Who eats chessburgers in archie comics?</Question>
+		<AnswerList>
+			<Answer>JugHead</Answer>
+			<Answer>Archie</Answer>
+			<Answer>Veronica</Answer>
+			<Answer>Betty</Answer>
+		</AnswerList>
+		<Name>Question1</Name>
+	</Question>
+</QuizDetails>
