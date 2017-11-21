@@ -35,10 +35,23 @@ function loadQuizInformation(xml)
 		switch(currentQuestion.getAttribute("Type"))
 		{
 			case "MultipleChoice":
-			var question = currentQuestion.getElementsByTagName("Question")[0].childNodes[0].nodeValue;
+			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
 			var nameGroup = currentQuestion.getElementsByTagName("Name")[0].childNodes[0].nodeValue;
 			var answers = currentQuestion.getElementsByTagName("Answer");
-			addMultipleChoiceQuestion(question, answers, nameGroup)
+			addMultipleChoiceQuestion(questionID, question, answers, nameGroup)
+			break;
+			case "Selection":
+			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
+			var answers = currentQuestion.getElementsByTagName("Answer");
+			addSelectionQuestion(questionID, question, answers);
+			break;
+			case "TrueFalse":
+			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
+			addTrueFalseQuestion(questionID, question) 
+			break;	
 		}
 	}
 
@@ -108,18 +121,44 @@ function setActiveButton(btn)
 	}
 }
 
-
-function addMultipleChoiceQuestion(que, ans, name)
+function addMultipleChoiceQuestion(queID, que, ans, name)
 {
-	var sec = "<div class=MultipleChoice>";
-	sec += "<h5>" + que +"</h5> <ul>";
+	var sec = "<div class=MultipleChoice id = "+ queID +">";
+	sec += "<p><b>" + que +" (SELECT ONE) </b></p> <ul>";
 	
 	for(iAnsCount=0; iAnsCount < ans.length; iAnsCount++)
 	{
-		var val =  ans[iAnsCount].childNodes[0].nodeValue 
+		var val =  ans[iAnsCount].childNodes[0].nodeValue ;
 		sec += "<input type=\"radio\" name=\"" + name + "\" " + "value=\"" + val + "\">" + val +"<br>";
 	}
 
+	sec += "</ul></div>";
+	document.getElementById("contentWindow").innerHTML += sec;
+}
+
+function addSelectionQuestion(queID, que, ans)
+{
+	var sec = "<div class=Selection id = "+ queID +">";
+	sec += "<p><b>" + que +" (SELECT ALL THAT APPLY) </b></p> <ul>";
+	for(iAnsCount=0; iAnsCount < ans.length; iAnsCount++)
+	{
+		var val =  ans[iAnsCount].childNodes[0].nodeValue; 
+		sec += "<input type=\"checkbox\" >" + val +"<br>";
+	}
+
+	sec += "</ul></div>";
+	document.getElementById("contentWindow").innerHTML += sec;
+}
+
+function addTrueFalseQuestion(queID, que)
+{
+	var sec = "<div class=TrueFalse id = "+ queID +">";
+	
+	sec += "<p><b>" + que +"</b></p> <ul>";
+	sec += "<input type=\"radio\" name=\"" + queID + "\" " + "value=\"True\">True<br>";
+	sec += "<input type=\"radio\" name=\"" + queID + "\" " + "value=\"False\">False<br>";
+
+	sec += "</ul></div>";
 	document.getElementById("contentWindow").innerHTML += sec;
 }
 

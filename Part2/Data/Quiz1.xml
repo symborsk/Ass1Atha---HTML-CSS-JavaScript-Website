@@ -2,13 +2,30 @@
 
 <QuizDetails>
 	<Question Type="MultipleChoice">
-		<Question>Who eats chessburgers in archie comics?</Question>
+		<QuestionTitle>The Aside Element is used for what?</QuestionTitle>
+		<QuestionID>Archie</QuestionID>
 		<AnswerList>
-			<Answer>JugHead</Answer>
-			<Answer>Archie</Answer>
-			<Answer>Veronica</Answer>
-			<Answer>Betty</Answer>
+			<Answer>Describe content that is unrelated to anything inside of the page</Answer>
+			<Answer>Describe content that is related to another item but does not fit inside that item</Answer>
+			<Answer>Describe navigation content that will go beside another item</Answer>
+			<Answer>None of the above</Answer>
 		</AnswerList>
 		<Name>Question1</Name>
+	</Question>
+	<Question Type="Selection">
+		<QuestionTitle>What is a valid self validating HTML input?</QuestionTitle>
+		<QuestionID>SelfValidating</QuestionID>
+		<AnswerList>
+			<Answer>color</Answer>
+			<Answer>video link</Answer>
+			<Answer>datetime-UNC</Answer>
+			<Answer>datetime-local</Answer>
+			<Answer>Month</Answer>
+			<Answer>Year</Answer>
+		</AnswerList>
+	</Question>
+	<Question Type="TrueFalse">
+		<QuestionTitle>Pixels (px) is an example of an Absoloute Measurment?</QuestionTitle>
+		<QuestionID>PixAbso</QuestionID>
 	</Question>
 </QuizDetails>

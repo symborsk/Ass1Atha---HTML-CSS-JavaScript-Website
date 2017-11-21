@@ -179,7 +179,7 @@ body{
     margin: 10px 10px;
 }
 
-.MultipleChoice{
+.MultipleChoice, .TrueFalse, .Selection{
     border: solid;
     border-color: #C0B283;
     overflow: hidden;
