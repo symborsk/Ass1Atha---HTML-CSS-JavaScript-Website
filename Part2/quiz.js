@@ -36,20 +36,20 @@ function loadQuizInformation(xml)
 		{
 			case "MultipleChoice":
 			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
-			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getAttribute("QuestionID")
 			var nameGroup = currentQuestion.getElementsByTagName("Name")[0].childNodes[0].nodeValue;
 			var answers = currentQuestion.getElementsByTagName("Answer");
 			addMultipleChoiceQuestion(questionID, question, answers, nameGroup)
 			break;
 			case "Selection":
 			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
-			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getAttribute("QuestionID")
 			var answers = currentQuestion.getElementsByTagName("Answer");
 			addSelectionQuestion(questionID, question, answers);
 			break;
 			case "TrueFalse":
 			var question = currentQuestion.getElementsByTagName("QuestionTitle")[0].childNodes[0].nodeValue;
-			var questionID = currentQuestion.getElementsByTagName("QuestionID")[0].childNodes[0].nodeValue;
+			var questionID = currentQuestion.getAttribute("QuestionID")
 			addTrueFalseQuestion(questionID, question) 
 			break;	
 		}
