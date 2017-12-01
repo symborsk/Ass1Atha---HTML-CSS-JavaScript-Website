@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <QuizDetails>
-	<Question Type="MultipleChoice" questionID ="AsideElement">
+	<Question Type="MultipleChoice" QuestionID ="AsideElement">
 		<QuestionTitle>The Aside Element is used for what?</QuestionTitle>
 		<AnswerList>
 			<Answer>Describe content that is unrelated to anything inside of the page</Answer>
@@ -11,13 +11,13 @@
 		</AnswerList>
 		<Name>Question1</Name>
 	</Question>
-	<Question Type="Selection" questionID="SelfValidating">
+	<Question Type="Selection" QuestionID="SelfValidating">
 		<QuestionTitle>What is a valid self validating HTML input?</QuestionTitle>
 		<AnswerList>
-			<Answer>color</Answer>
-			<Answer>video link</Answer>
-			<Answer>datetime-UNC</Answer>
-			<Answer>datetime-local</Answer>
+			<Answer>Color</Answer>
+			<Answer>Video link</Answer>
+			<Answer>Datetime-UNC</Answer>
+			<Answer>Datetime-local</Answer>
 			<Answer>Month</Answer>
 			<Answer>Year</Answer>
 		</AnswerList>
@@ -25,6 +25,8 @@
 	<Question Type="TrueFalse" QuestionID="PixAbso">
 		<QuestionTitle>Pixels (px) is an example of an Absoloute Measurment?</QuestionTitle>
 	</Question>
-	<Answer>
-	</Answer>
+
+	<Key questionID = "AsideElement">Describe content that is related to another item but does not fit inside that item</Key>
+	<Key questionID ="SelfValidation">color;datetime-local;Month;Year</Key>
+	<Key>False</Key>
 </QuizDetails>
