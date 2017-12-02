@@ -26,7 +26,7 @@
 		<QuestionTitle>Pixels (px) is an example of an Absoloute Measurment?</QuestionTitle>
 	</Question>
 
-	<Key questionID = "AsideElement">Describe content that is related to another item but does not fit inside that item</Key>
-	<Key questionID ="SelfValidation">color;datetime-local;Month;Year</Key>
-	<Key>False</Key>
+	<Key questionID="AsideElement" MultipleAnswers="false">Describe content that is related to another item but does not fit inside that item</Key>
+	<Key questionID ="SelfValidating" MultipleAnswers="true">Color;Datetime-local;Month;Year</Key>
+	<Key questionID ="PixAbso"  MultipleAnswers="false">False</Key>
 </QuizDetails>
