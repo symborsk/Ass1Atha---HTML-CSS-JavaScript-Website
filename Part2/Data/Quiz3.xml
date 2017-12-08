@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuizDetails>
+
+	<Question Type="TrueFalse" QuestionID="XMLFile">
+		<QuestionTitle>XML Files are useful data structure but not easy for humans to read directly.</QuestionTitle>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Tags">
+		<QuestionTitle>Start tags in xmls must have an assosiated end tag.</QuestionTitle>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Case">
+		<QuestionTitle>XMLs are case insensitive.</QuestionTitle>
+	</Question>
+
+	<Question Type="Selection" QuestionID="XMLSchema">
+		<QuestionTitle>Select all the valid XML schema types?</QuestionTitle>
+		<AnswerList>
+			<Answer>string</Answer>
+			<Answer>bitmap</Answer>
+			<Answer>long</Answer>
+			<Answer>color</Answer>
+			<Answer>time</Answer>
+		</AnswerList>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="DateSchema">
+		<QuestionTitle>Date Schema requires the user to specify a timezone.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="Tranformation">
+		<QuestionTitle>What type of transformation allows us to convert xml to text based document?</QuestionTitle>
+		<AnswerList>
+			<Answer>XLS</Answer>
+			<Answer>XLT</Answer>
+			<Answer>XSL</Answer>
+			<Answer>CON</Answer>
+		</AnswerList>
+		<Name>QuestionTranformation</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Schema">
+		<QuestionTitle>XML file must always have a schema.</QuestionTitle>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Ajax">
+		<QuestionTitle>Ajax uses asynchronous calls to improve user's experience.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="RetrievalAjax">
+		<QuestionTitle>What type of function do we utilize in Ajax to respond to successful retrieval of data?</QuestionTitle>
+		<AnswerList>
+			<Answer>Static</Answer>
+			<Answer>External</Answer>
+			<Answer>Callback</Answer>
+			<Answer>Private</Answer>
+		</AnswerList>
+		<Name>QuestionRetrievalAjax</Name>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="XMLHttpProp">
+		<QuestionTitle>What property tracks the request's progress of an XMLHttpRequest?</QuestionTitle>
+		<AnswerList>
+			<Answer>readyState</Answer>
+			<Answer>responseText</Answer>
+			<Answer>status</Answer>
+			<Answer>statusText</Answer>
+		</AnswerList>
+		<Name>QuestionXMLHttpProp</Name>
+	</Question>
+
+	<Key questionID ="XMLFile"  MultipleAnswers="false">False</Key>
+	<Key questionID ="Tags"  MultipleAnswers="false">True</Key>
+	<Key questionID ="Case"  MultipleAnswers="false">False</Key>
+	<Key questionID ="XMLSchema"  MultipleAnswers="true">string,long,time</Key>
+	<Key questionID ="DateSchema"  MultipleAnswers="false">False</Key>
+	<Key questionID ="Tranformation"  MultipleAnswers="false">XSL</Key>
+	<Key questionID ="Schema"  MultipleAnswers="false">False</Key>
+	<Key questionID ="Ajax"  MultipleAnswers="false">True</Key>
+	<Key questionID ="RetrievalAjax"  MultipleAnswers="false">Callback</Key>
+	<Key questionID ="XMLHttpProp"  MultipleAnswers="false">readyState</Key>
+
+</QuizDetails>

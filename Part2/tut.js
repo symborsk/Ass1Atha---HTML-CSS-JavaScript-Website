@@ -1,25 +1,42 @@
 
-function registerTutNavigationPane()
-{
-	document.getElementById("unit1Tut").addEventListener("click", onClick_Unit1Tut, false);
+function registerTutNavigationPane(){
+	document.getElementById("unit1Tut").addEventListener("click", onClick_unit1Tut, false);
+	document.getElementById("unit2Tut").addEventListener("click", onClick_unit2Tut, false);
+	document.getElementById("unit3Tut").addEventListener("click", onClick_unit3Tut, false);
 }
 
-function onClick_Unit1Tut()
-{
+function onClick_unit1Tut() {
 	var req = new XMLHttpRequest();
-	req.open("GET", "Data/Tut1.xml",true);
-	req.onreadystatechange = loadUnit1Tut;
+	req.open("GET", "Data/Tut1.xml", true);
+	sessionStorage.Unit = 1;
+	req.onreadystatechange = loadUnitTut;
 	req.send();
 }
 
-function loadUnit1Tut()
-{
+function onClick_unit2Tut() {
+	var req = new XMLHttpRequest();
+	req.open("GET", "Data/Tut2.xml", true);
+	sessionStorage.Unit = 2;
+	req.onreadystatechange = loadUnitTut;
+	req.send();
+}
+
+function onClick_unit3Tut() {
+	var req = new XMLHttpRequest();
+	req.open("GET", "Data/Tut3.xml", true);
+	sessionStorage.Unit = 3;
+	req.onreadystatechange = loadUnitTut;
+	req.send();
+}
+
+function loadUnitTut(){
+	
 	if(this.readyState == 4 && this.status == 200)
 	{
-		clearContentWindow()
+		clearContentWindow();
 		var xmlDOC = this.responseXML;
 		loadTutorialInfo(xmlDOC);
-		setActiveButton("btnUnit1");
+		setActiveButton();
 	}
 }
 
@@ -101,10 +118,11 @@ function setActiveButton(btn)
 	var btnUnit1 = document.getElementById("btnUnit1");
 	var btnUnit2 = document.getElementById("btnUnit2");
 	var btnUnit3 = document.getElementById("btnUnit3");
+	var unit = sessionStorage.Unit;
 
 	switch(btn)
 	{
-		case "btnHome":
+		case "0":
 			btnHome.classList.remove("inactive");
 			btnHome.classList.add("active");
 
@@ -117,7 +135,7 @@ function setActiveButton(btn)
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit1":
+		case "1":
 			btnUnit1.classList.remove("inactive");
 			btnUnit1.classList.add("active");
 
@@ -130,7 +148,7 @@ function setActiveButton(btn)
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit2":
+		case "2":
 			btnUnit2.classList.remove("inactive");
 			btnUnit2.classList.add("active");
 
@@ -143,7 +161,7 @@ function setActiveButton(btn)
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit3":
+		case "3":
 			btnUnit3.classList.remove("inactive");
 			btnUnit3.classList.add("active");
 
@@ -157,4 +175,4 @@ function setActiveButton(btn)
 	}
 }
 
-window.addEventListener("load", registerTutNavigationPane, false)
+window.addEventListener("load", registerTutNavigationPane, false);

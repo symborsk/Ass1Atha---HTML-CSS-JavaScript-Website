@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuizDetails>
+	
+	<Question Type="TrueFalse" QuestionID="JavaFiles">
+		<QuestionTitle>You can place javascript code at the top of an HTML file.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="Operator=">
+		<QuestionTitle>The "==" operator is used for what operation?</QuestionTitle>
+		<AnswerList>
+			<Answer>Assignment</Answer>
+			<Answer>Comparison</Answer>
+			<Answer>Both assignment and comparison</Answer>
+			<Answer>None of the above</Answer>
+		</AnswerList>
+		<Name>QuestionOperator=</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="SemiColon">
+		<QuestionTitle>Every statement in JavaScript must be terminated with a semi-colon.</QuestionTitle>
+	</Question>
+
+	<Question Type="Selection" QuestionID="JavaScriptOperators">
+		<QuestionTitle>Select all operators that are matched with their correct JavaScript Operation?</QuestionTitle>
+		<AnswerList>
+			<Answer>+ | Addition</Answer>
+			<Answer>^ | Remainder</Answer>
+			<Answer>x | Multiplication</Answer>
+			<Answer>/ | Division</Answer>
+		</AnswerList>
+	</Question>
+
+	<Question Type="Selection" QuestionID="ReservedWords">
+		<QuestionTitle>Select all that are NOT JavaScript reserved words?</QuestionTitle>
+		<AnswerList>
+			<Answer>enum</Answer>
+			<Answer>cons</Answer>
+			<Answer>inherits</Answer>
+			<Answer>super</Answer>
+			<Answer>int</Answer>
+		</AnswerList>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="Returns">
+		<QuestionTitle>Which is not a way to return from a function?</QuestionTitle>
+		<AnswerList>
+			<Answer>Reaching the end of a function</Answer>
+			<Answer>Executing a line with "Exit Function" statment</Answer>
+			<Answer>Executing a line with "Return" statment</Answer>
+			<Answer>Executing a line with "Return [Expression]" statment</Answer>
+		</AnswerList>
+		<Name>QuestionReturns</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="ArraysIndex">
+		<QuestionTitle>Arrays first element index is 1.</QuestionTitle>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="ArraysReallocation">
+		<QuestionTitle>Arrays can dynamically reallocate memory when a value is assigned to an index that does not exist.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="DOMModel">
+		<QuestionTitle>The Dom model is best modelled as a?</QuestionTitle>
+		<AnswerList>
+			<Answer>Octopus</Answer>
+			<Answer>Tree</Answer>
+			<Answer>Map</Answer>
+			<Answer>Family</Answer>
+		</AnswerList>
+		<Name>QuestionDOMModel</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="EventRegistering">
+		<QuestionTitle>There are two ways to register an event Tradtitional and Online.</QuestionTitle>
+	</Question>
+
+
+	<Key questionID ="JavaFiles"  MultipleAnswers="false">True</Key>
+	<Key questionID ="Operator="  MultipleAnswers="false">Comparison</Key>
+	<Key questionID ="SemiColon"  MultipleAnswers="false">True</Key>
+	<Key questionID ="JavaScriptOperators"  MultipleAnswers="true">+ | Addition,/ | Division</Key>
+	<Key questionID ="ReservedWords"  MultipleAnswers="true">cons,inherits,int</Key>
+	<Key questionID ="Returns"  MultipleAnswers="false">Executing a line with "Exit Function" statment</Key>
+	<Key questionID ="ArraysIndex"  MultipleAnswers="false">False</Key>
+	<Key questionID ="ArraysReallocation"  MultipleAnswers="false">True</Key>
+	<Key questionID ="DOMModel"  MultipleAnswers="false">Tree</Key>
+	<Key questionID ="EventRegistering"  MultipleAnswers="false">False</Key>
+
+
+</QuizDetails>

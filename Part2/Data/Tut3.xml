@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TutorialDetails>
+	<Section Type="FigureExplanation">
+		<Header>XML Files</Header>
+		<IMGPath>IMG/xmlEx.png</IMGPath>
+		<Explanation>
+			Xml documents allow us to store data in a way that people can easily read and computers can easily parse. We can use an xml parser to parse through a document and interpret the data and use it in whatever way we want. An XML document may reference a schema but it does not always. An xml file needs to be well formed for a parser to evaluate it.
+		</Explanation>
+	</Section>
+	<Section Type="List">
+	<Header>Programming Tips for Xmls:</Header>
+		<ListItems>
+			<Item>Any white spaces before the xml declaration will be evaluated as an error</Item>
+			<Item>Every start tag in an xml must have an end tag as well</Item>
+			<Item>XML just like JavaScript is case sensitive</Item>
+			<Item>No white spaces are allowed in an XML element name</Item>
+			<Item>Make sure to label your xml element with good understandable names</Item>
+		</ListItems>
+		<Conclusion> These tips will ensure you are a proficient user of the XML file type.</Conclusion>
+	</Section>
+	<Section Type="FigureCaption">
+		<IMGPath>IMG/MarkupChar.png</IMGPath>
+		<Caption>Markup characters cannot be used directly in character data.</Caption>
+	</Section>
+	<Section Type="FigureCaption">
+		<IMGPath>IMG/XMLSchemaTypes.png</IMGPath>
+		<Caption>All of our XML Schema Types.</Caption>
+	</Section>
+	<Section Type="FigureExplanation">
+		<Header>XSL Tranformation</Header>
+		<IMGPath>IMG/xslTran.png</IMGPath>
+		<Explanation>
+			XSL transformations give us a way to directly convert any xml into a text based document. XSL style sheets can be directly connect to an XML file and transform xml data into the image seen here.
+		</Explanation>
+	</Section>
+	<Section Type="FigureExplanation">
+	<Header>Ajax Enabled Web Apps</Header>
+	<IMGPath>IMG/ajax.png</IMGPath>
+	<Explanation>
+		Ajax allows web applications to feel more like desktop application. Requests for data to the server are done using asynchronous calls. The page then performs partial updates in order to reduce the loading time when loading new information to the web page. As programmers we utilize callback functions to ensure that once the request is complete we proceed with processing the data.
+	</Explanation>
+	</Section>
+	<Section Type="FigureCaption">
+		<IMGPath>IMG/RequestProp.png</IMGPath>
+		<Caption>An XMLHttpRequest that is used in raw ajax has following properties.</Caption>
+	</Section>
+</TutorialDetails>

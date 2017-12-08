@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <QuizDetails>
+	
 	<Question Type="MultipleChoice" QuestionID ="AsideElement">
 		<QuestionTitle>The Aside Element is used for what?</QuestionTitle>
 		<AnswerList>
@@ -9,8 +10,9 @@
 			<Answer>Describe navigation content that will go beside another item</Answer>
 			<Answer>None of the above</Answer>
 		</AnswerList>
-		<Name>Question1</Name>
+		<Name>QuestionAsideElement</Name>
 	</Question>
+
 	<Question Type="Selection" QuestionID="SelfValidating">
 		<QuestionTitle>What is a valid self validating HTML input?</QuestionTitle>
 		<AnswerList>
@@ -22,11 +24,69 @@
 			<Answer>Year</Answer>
 		</AnswerList>
 	</Question>
+
 	<Question Type="TrueFalse" QuestionID="PixAbso">
-		<QuestionTitle>Pixels (px) is an example of an Absoloute Measurment?</QuestionTitle>
+		<QuestionTitle>Pixels (px) is an example of an Absoloute Measurment.</QuestionTitle>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Tags">
+		<QuestionTitle>All Html items have a start and end tag.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="TopPage">
+	<QuestionTitle>What element in HTML5 typically defines the top area of the page?</QuestionTitle>
+	<AnswerList>
+		<Answer>Header</Answer>
+		<Answer>Footer</Answer>
+		<Answer>Section</Answer>
+		<Answer>Aside</Answer>
+	</AnswerList>
+	<Name>QuestionTopPage</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="colorInput">
+		<QuestionTitle>Color input in HTML5 requires a hexadecimal input.</QuestionTitle>
+	</Question>
+
+	<Question Type="Selection" QuestionID="MimeTypes">
+		<QuestionTitle>What is a valid self validating HTML input?</QuestionTitle>
+		<AnswerList>
+			<Answer>text/css</Answer>
+			<Answer>image/jpeg</Answer>
+			<Answer>text/ajax</Answer>
+			<Answer>text/html</Answer>
+			<Answer>text/plain</Answer>
+			<Answer>image/png</Answer>
+		</AnswerList>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="relativeAbso">
+		<QuestionTitle>Using relative length measurments is reccomended as will aloow your page to scale better.</QuestionTitle>
+	</Question>
+
+	<Question Type="MultipleChoice" QuestionID ="ContentAround">
+	<QuestionTitle>What style is useful for loading content around other content?</QuestionTitle>
+	<AnswerList>
+		<Answer>Floating</Answer>
+		<Answer>Absoloute Sizing</Answer>
+		<Answer>Relative Sizing</Answer>
+		<Answer>Wrapping</Answer>
+	</AnswerList>
+	<Name>QuestionContentAround</Name>
+	</Question>
+
+	<Question Type="TrueFalse" QuestionID="Braille">
+		<QuestionTitle>Braille is a valid media type.</QuestionTitle>
 	</Question>
 
 	<Key questionID="AsideElement" MultipleAnswers="false">Describe content that is related to another item but does not fit inside that item</Key>
-	<Key questionID ="SelfValidating" MultipleAnswers="true">Color;Datetime-local;Month;Year</Key>
+	<Key questionID ="SelfValidating" MultipleAnswers="true">Color,Datetime-local,Month,Year</Key>
 	<Key questionID ="PixAbso"  MultipleAnswers="false">False</Key>
+	<Key questionID ="Tags"  MultipleAnswers="false">False</Key>
+	<Key questionID ="TopPage"  MultipleAnswers="false">Header</Key>
+	<Key questionID ="colorInput"  MultipleAnswers="false">True</Key>
+	<Key questionID ="MimeTypes"  MultipleAnswers="true">text/css,image/jpeg,text/html,text/plain,image/png</Key>
+	<Key questionID ="relativeAbso"  MultipleAnswers="false">True</Key>
+	<Key questionID ="ContentAround"  MultipleAnswers="false">Floating</Key>
+	<Key questionID ="Braille"  MultipleAnswers="false">True</Key>
 </QuizDetails>

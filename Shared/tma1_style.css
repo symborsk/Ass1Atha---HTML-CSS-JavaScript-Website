@@ -193,6 +193,12 @@ body{
     width: 94%;
 }
 
+.submitButton{
+     margin-bottom: 30px;
+     margin-left: 20px;
+}
+
+
 html {
     height: 100%;
 }

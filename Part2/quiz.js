@@ -1,24 +1,67 @@
 
 function registerQuizNavigationPane(){
 	document.getElementById("unit1Quiz").addEventListener("click", onClick_unit1Quiz, false);
+	document.getElementById("unit2Quiz").addEventListener("click", onClick_unit2Quiz, false);
+	document.getElementById("unit3Quiz").addEventListener("click", onClick_unit3Quiz, false);
 }
 
 function onClick_unit1Quiz() {
 	var req = new XMLHttpRequest();
 	req.open("GET", "Data/Quiz1.xml", true);
-	req.onreadystatechange = loadUnit1Quiz;
+	sessionStorage.Unit = 1;
+	req.onreadystatechange = loadUnitQuiz;
 	req.send();
 }
 
-function submit_unit1Quiz(){
+function onClick_unit2Quiz() {
 	var req = new XMLHttpRequest();
-	req.open("GET", "Data/Quiz1.xml", true);
-	req.onreadystatechange = checkUnit1Quiz;
+	req.open("GET", "Data/Quiz2.xml", true);
+	sessionStorage.Unit = 2;
+	req.onreadystatechange = loadUnitQuiz;
+	req.send();
+}
+
+function onClick_unit3Quiz() {
+	var req = new XMLHttpRequest();
+	req.open("GET", "Data/Quiz3.xml", true);
+	sessionStorage.Unit = 3;
+	req.onreadystatechange = loadUnitQuiz;
+	req.send();
+}
+
+function loadUnitQuiz(){
+	
+	if(this.readyState == 4 && this.status == 200)
+	{
+		clearContentWindow();
+		var xmlDOC = this.responseXML;
+		loadQuizInformation(xmlDOC);
+		setActiveButton();
+	}
+}
+
+function submit_unitQuiz(){
+	var req = new XMLHttpRequest();
+	var unit = sessionStorage.Unit;
+
+	switch (unit){
+		case "1":
+			req.open("GET", "Data/Quiz1.xml", true);
+			break;
+		case "2":
+			req.open("GET", "Data/Quiz2.xml", true);
+			break;
+		case "3":
+			req.open("GET", "Data/Quiz3.xml", true);
+			break;
+	}
+	
+	req.onreadystatechange = checkUnitQuiz;
 	req.send();
 	return false;
 }
 
-function checkUnit1Quiz(){
+function checkUnitQuiz(){
 	if(this.readyState == 4 && this.status == 200)
 	{
 		var xmlDOC = this.responseXML;
@@ -41,10 +84,11 @@ function checkUnit1Quiz(){
 		  else
 		  {
 				console.log("Answer is wrong!")
-				HighlightRed(answerId);
+				HighlightRed(answerId, answer);
 		  }
 		}
-		document.getElementById("FinalScore").innerHTML = "Final Score: " + correct + "/" + total
+		document.getElementById("FinalScore").innerHTML = "Final Score: " + correct + "/" + total + " Percentage: " + (correct/total)*100 + "%"
+		document.getElementById("submit").style.visibility = "hidden";
 	}
 }
 
@@ -52,7 +96,7 @@ function IsCorrectAnswer(ansID, ans, multiAnswer){
 	var answers = document.getElementById(ansID).getElementsByTagName("input");
 	if(multiAnswer)
 	{
-		var answersKey = ans.split(";");
+		var answersKey = ans.split(",");
 		var answerCount = answersKey.length;
 		var currentAnswerCount = 0;
 
@@ -110,18 +154,9 @@ function HighlightGreen(ansID){
 	document.getElementById(ansID).style.borderColor = "green";
 }
 
-function HighlightRed(ansID){
+function HighlightRed(ansID, answer){
 	document.getElementById(ansID).style.borderColor = "red";
-}
-
-function loadUnit1Quiz(){
-	if(this.readyState == 4 && this.status == 200)
-	{
-		clearContentWindow();
-		var xmlDOC = this.responseXML;
-		loadQuizInformation(xmlDOC);
-		setActiveButton("btnUnit1");
-	}
+	document.getElementById(ansID).innerHTML += "<h5> Answer is: " + answer + "</h5>"; 
 }
 
 function loadQuizInformation(xml){
@@ -130,7 +165,7 @@ function loadQuizInformation(xml){
 	//Load the form start
 	
 	var runningTag = "<h5 id=\"FinalScore\"></h5>"
-	runningTag += "<form class=\"QuizForm\" id=\"unit1Quiz\" onsubmit=\"return submit_unit1Quiz();\" method=\"post\">";
+	runningTag += "<form class=\"QuizForm\" id=\"unit1Quiz\" onsubmit=\"return submit_unitQuiz();\" method=\"post\">";
 
 	for(var iQueCount = 0; iQueCount < questions.length; iQueCount++)
 	{
@@ -159,22 +194,20 @@ function loadQuizInformation(xml){
 	}
 
 	//Load the end of the form
-	 runningTag += "<input type=\"submit\" id=\"submit\" value= \"Submit Answers\"></form>";
+	 runningTag += "<input type=\"submit\" class=\"submitButton\" id=\"submit\" value= \"Submit Answers\"></form>";
 	 document.getElementById("contentWindow").innerHTML += runningTag;  
-	
-	//Be sure to register the event as well
-	//document.getElementById("submit").addEventListener("click", submit_unit1Quiz, false);
 }
 
-function setActiveButton(btn){
+function setActiveButton(){
 	var btnHome = document.getElementById("btnHome");
 	var btnUnit1 = document.getElementById("btnUnit1");
 	var btnUnit2 = document.getElementById("btnUnit2");
 	var btnUnit3 = document.getElementById("btnUnit3");
+	var unit = sessionStorage.Unit;
 
-	switch(btn)
+	switch(unit)
 	{
-		case "btnHome":
+		case "0":
 			btnHome.classList.remove("inactive");
 			btnHome.classList.add("active");
 
@@ -187,7 +220,7 @@ function setActiveButton(btn){
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit1":
+		case "1":
 			btnUnit1.classList.remove("inactive");
 			btnUnit1.classList.add("active");
 
@@ -200,7 +233,7 @@ function setActiveButton(btn){
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit2":
+		case "2":
 			btnUnit2.classList.remove("inactive");
 			btnUnit2.classList.add("active");
 
@@ -213,7 +246,7 @@ function setActiveButton(btn){
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "btnUnit3":
+		case "3":
 			btnUnit3.classList.remove("inactive");
 			btnUnit3.classList.add("active");
 
@@ -229,7 +262,7 @@ function setActiveButton(btn){
 
 function addMultipleChoiceQuestion(queID, que, ans, name){
 	var sec = "<div class=MultipleChoice id=\""+queID+"\">";
-	sec += "<p><b>" + que +" (SELECT ONE) </b></p> <ul>";
+	sec += "<p><b>" + que +" (SELECT ONE) </b></p> <ul class=\"Answers\">";
 	
 	for(var iAnsCount=0; iAnsCount < ans.length; iAnsCount++)
 	{
@@ -243,7 +276,7 @@ function addMultipleChoiceQuestion(queID, que, ans, name){
 
 function addSelectionQuestion(queID, que, ans){
 	var sec = "<div class=Selection id=\""+queID+"\">";
-	sec += "<p><b>" + que +" (SELECT ALL THAT APPLY) </b></p> <ul>";
+	sec += "<p><b>" + que +" (SELECT ALL THAT APPLY) </b></p> <ul class=\"Answers\">";
 	for(var iAnsCount=0; iAnsCount < ans.length; iAnsCount++)
 	{
 		var val =  ans[iAnsCount].childNodes[0].nodeValue; 
@@ -257,7 +290,7 @@ function addSelectionQuestion(queID, que, ans){
 function addTrueFalseQuestion(queID, que){
 	var sec = "<div class=TrueFalse id=\""+queID+"\">";
 	
-	sec += "<p><b>" + que +"</b></p> <ul>";
+	sec += "<p><b>" + que +"</b></p> <ul class=\"Answers\">";
 	sec += "<input type=\"radio\" name=\"" + queID + "\" " + "value=\"True\">True<br>";
 	sec += "<input type=\"radio\" name=\"" + queID + "\" " + "value=\"False\">False<br>";
 
