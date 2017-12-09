@@ -37,8 +37,33 @@
 <div class="icon-bar">
     <a id="home" class="inactive" style="width:100%" href="..\tma1.htm"><i class="fa fa-home"></i></a> 
 </div>
-<div id=contentWindow>
-    <canvas id="pictureCanvas" width="2000" height="2000"></canvas>
+<div>
+    <div class="canvasWindow">
+        <canvas id="pictureCanvas" height="800" width="800"></canvas>
+    </div>
+    <div class="controlPanel">
+        <div><input type="button" id="startStop" onclick="startStop()" value="Stop"></div>
+        <div>
+            <select id="sequence">
+                <option value="Sequential">Sequential</option>
+                <option id="Random" value="saab">Random</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" id="previous" onclick="previousPicture()" value="Previous">
+            <input type="button" id="next" onclick="nextPicture()" value="Next">
+        </div>
+        <div>
+              <select id= "effect">
+                <option value="Fade">Fade</option>
+                <option value="Slide">Slide</option>
+            </select>
+        </div>
+    </div>
+
+
+
+
 </div>
 
 </body>

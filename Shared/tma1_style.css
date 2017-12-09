@@ -31,8 +31,15 @@ color : #373737;
 margin-left : 75px;
 }
 
-body{
-    
+canvas {
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: solid;
+    border-color: #373737;
 }
 
 .icon-bar {
@@ -198,6 +205,34 @@ body{
      margin-left: 20px;
 }
 
+.controlPanel{
+    width: 40%;
+    height: 170px;
+    border: solid;
+    border-color: #C0B283;
+    overflow: hidden;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.controlPanel input{
+    width:100px;
+    height:30px;
+    border-color: #DCD0C0;
+    margin-top:10px;
+}
+
+.controlPanel select{
+    width:100px;
+    height:30px;
+    border-color: #DCD0C0;
+    margin-top:10px;
+}
 
 html {
     height: 100%;
