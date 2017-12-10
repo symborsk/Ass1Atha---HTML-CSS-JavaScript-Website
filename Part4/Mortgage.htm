@@ -1,0 +1,38 @@
+<div class="mortgagePanel">
+	<h5> Mortgage Calculator: </h5>
+
+	<div class="labelInput" >
+		<label>Mortgage Amount($)</label>
+		<input type="Number" id="amount"/ min="0">
+	</div><br>
+
+	<div class="labelInput" >
+		<label>Down Payment($)</label>
+		<input type="Number" id="downPayment"/ min="0">
+	</div><br> 
+
+	<div class="labelInput" >
+		<label>Mortgage Interest(%)</label>
+		<input type="number" id="interest"/ min="1" max="100">
+	</div><br>
+
+	<div class="labelInput" >
+		<label>Years To Pay Off</label>
+		<input type="number" id="years"/ min="1">
+	</div><br>
+
+	<div>
+		<h6>Payment Frequency: </h6>
+		<div class="radioList">
+			<input type="radio" name="frequecy" value="monthly">monthly<br>
+			<input type="radio" name="frequecy" value="bi-monthly">bi-monthly<br>
+			<input type="radio" name="frequecy" value="weekly">weekly<br>
+		</div>
+	</div><br>
+
+	<input type="button" id="calcMorBtn" onclick="calculateMortgage()" value="Calculate">
+
+	<h6>Payment Price: </h6>
+	<label id="paymentPrice">$1200</label>
+
+</div>

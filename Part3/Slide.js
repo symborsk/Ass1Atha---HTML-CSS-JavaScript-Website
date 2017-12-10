@@ -34,6 +34,12 @@ function initializeSystemVariables(){
 	sessionStorage.Started = "false";
 	canvas = document.getElementById("pictureCanvas");
 	ctx = canvas.getContext("2d");
+
+	ctx.font="40px Georgia";
+	ctx.fillStyle = "Black"
+	ctx.fillText("Click Start To Begin Slideshow!", 100, 150);
+
+
 	document.getElementById("startStop").value = "Start";
 }
 
@@ -71,10 +77,14 @@ function previousPicture(){
 
 	sessionStorage.ImageIndex = parseInt(sessionStorage.ImageIndex) - 2;
 
-	if(sessionStorage.ImageIndex == -1 || sessionStorage.ImageIndex == -2){
+	if(sessionStorage.ImageIndex == -1 ){
 		sessionStorage.ImageIndex = 19;
 	}
 
+	if(sessionStorage.ImageIndex == -2){
+		sessionStorage.ImageIndex = 18;
+	}
+	
 	loadNextImage();
 }
 
@@ -130,7 +140,7 @@ function fadeOut(){
 		ctx.globalAlpha = ctx.globalAlpha - 0.05;
 		
 		ctx.clearRect(0,0,canvas.width,canvas.height);
-		ctx.drawImage(currentImage, 0, 0, 800, 800);
+		ctx.drawImage(currentImage, 0, 0, 800, 700);
 
 		if(ctx.globalAlpha <= 0.05){
 			clearInterval(intervalTimer);
@@ -174,8 +184,8 @@ function slideOut(){
 		}
 
 		xImageCoord +=20;
-		ctx.clearRect(0, 0, 800, 800);  // clear canvas
-  		ctx.drawImage(currentImage, xImageCoord, yImageCoord, 800, 800);
+		ctx.clearRect(0, 0, 800, 700);  // clear canvas
+  		ctx.drawImage(currentImage, xImageCoord, yImageCoord, 800, 700);
 
   		if(xImageCoord >= 800){
 			clearInterval(intervalTimer);
@@ -187,8 +197,8 @@ function slideOut(){
 function slideIn(){
 
 	xImageCoord -= 20;
- 	ctx.clearRect(0, 0, 800, 800);  // clear canvas
-  	ctx.drawImage(nextImage, xImageCoord, yImageCoord, 800, 800);
+ 	ctx.clearRect(0, 0, 800, 700);  // clear canvas
+  	ctx.drawImage(nextImage, xImageCoord, yImageCoord, 800, 700);
 
 	if(xImageCoord <= 0){		
 
