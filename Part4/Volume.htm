@@ -1,30 +1,29 @@
 <div class="convertPanel">
 	<h5> Volume Conversion </h5>
-	<input type="text" id="conversionText">
+	<input type="text" onchange="convertValue()" id="conversionText">
 	<h5 id="answerconversion"></h5>
-	<input type="button" id="convertBtn" onclick="convertValue()" value="Convert">
 	<div class="inlineHeaders">
 		<span style="margin-right:200px"><h5>From: </h5></span>
 		<span style ="margin-left:200px"><h5>To: </h5></span>
 	</div>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="cm3">cm<sup>3</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="cm3">cm<sup>3</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="cm3">cm<sup>3</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="cm3">cm<sup>3</sup></span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="m3">m<sup>3</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="m3">m<sup>3</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="m3">m<sup>3</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="m3">m<sup>3</sup></span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="gal">gal</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="gal">gal</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="gal">gal</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="gal">gal</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="litre">litre</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="litre">litre</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="litre">litre</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="litre">litre</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="pint">pint</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="pint">pint</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="pint">pint</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="pint">pint</span>
 	</div>
 </div>

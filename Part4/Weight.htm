@@ -1,31 +1,30 @@
 
 <div class="convertPanel">
 	<h5> Weight Conversion </h5>
-	<input type="text" id="conversionText">
+	<input type="text" onchange="convertValue()" id="conversionText">
 	<h5 id="answerconversion"></h5>
-	<input type="button" id="convertBtn" onclick="convertValue()" value="Convert">
 	<div class="inlineHeaders">
 		<span style="margin-right:200px"><h5>From: </h5></span>
 		<span style ="margin-left:200px"><h5>To: </h5></span>
 	</div>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="Kg">Kg</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="Kg">Kg</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="Kg">Kg</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="Kg">Kg</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="Gram">Gram</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="Gram">Gram</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="Gram">Gram</span>
+		 <span style ="margin-left:400px"><input type="radio" onchange="convertValue()" name="To" value="Gram">Gram</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="Ounce">Ounce</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="Ounce">Ounce</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="Ounce">Ounce</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="Ounce">Ounce</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="Pound">Pound</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="Pound">Pound</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="Pound">Pound</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="Pound">Pound</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="Ton">Ton</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="Ton">Ton</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="Ton">Ton</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="Ton">Ton</span>
 	</div>
 </div>

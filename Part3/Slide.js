@@ -160,7 +160,7 @@ function fadeIn(){
 		//Load caption just at end to ensure that the random generator can be used
 		ctx.font="40px Georgia";
 		ctx.fillStyle = "white"
-		ctx.fillText(nextCaption, getRandomNumber(300), getRandomNumber(300));
+		ctx.fillText(nextCaption, getRandomNumber(150), getRandomNumber(300));
 		
 		clearInterval(intervalTimer);
 		currentImage = nextImage;
@@ -205,7 +205,7 @@ function slideIn(){
 		//Load caption just at end to ensure that the random generator can be used
 		ctx.font="40px Georgia";
 		ctx.fillStyle = "white"
-		ctx.fillText(nextCaption, getRandomNumber(300), getRandomNumber(300));
+		ctx.fillText(nextCaption, getRandomNumber(150), getRandomNumber(300));
 
 		clearInterval(intervalTimer);
 		

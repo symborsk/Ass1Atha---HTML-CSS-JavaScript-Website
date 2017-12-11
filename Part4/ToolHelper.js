@@ -28,6 +28,7 @@ function registerButtonEvents(){
 	document.getElementById("Areas").addEventListener("click", onClick_Area, false);
 	document.getElementById("Volumes").addEventListener("click", onClick_Volume, false);
 	document.getElementById("MortgageCalc").addEventListener("click", onClick_Mortgage, false);
+	document.getElementById("QuadraticSolver").addEventListener("click", onClick_Quadratic, false);
 }
 
 function onClick_Weight(){
@@ -71,6 +72,14 @@ function onClick_Mortgage(){
 	req.open("GET", "Mortgage.htm", true);
 	req.onreadystatechange = loadHtml;
 	sessionStorage.Tool = "Mortgage";
+	req.send();
+}
+
+function onClick_Quadratic(){
+	var req = new XMLHttpRequest();
+	req.open("GET", "Quadratic.htm", true);
+	req.onreadystatechange = loadHtml;
+	sessionStorage.Tool = "Quadratic";
 	req.send();
 }
 
@@ -141,7 +150,7 @@ function setActiveButton(btn)
 			btnUnit3.classList.add("inactive");
 			break;
 
-		case "Custom":
+		case "QUadratic":
 			btnUnit3.classList.remove("inactive");
 			btnUnit3.classList.add("active");
 
@@ -372,7 +381,7 @@ function GetPaymentsPerYear(freq){
 			return 52;
 	}
 
-	return 0;
+	return NaN;
 }
 
 function roundToAtMost(num,numDigits){
@@ -390,15 +399,35 @@ function calculateMortgage(){
 	var downPayment = document.getElementById("downPayment").value;
 	var interest = parseInt(document.getElementById("interest").value)/100;
 	var years = document.getElementById("years").value;
-	var paymentsPerYear = GetPaymentsPerYear(document.getElementsByName("frequecy"))
+	var paymentsPerYear = GetPaymentsPerYear(document.getElementsByName("frequecy"));
 
+	if(parseInt(mortgageAmount) && parseInt(downPayment) && parseFloat(interest) && parseInt(years) && parseInt(paymentsPerYear)){
 	var amount = mortgageAmount - downPayment;
 	var periodInterest = interest/paymentsPerYear
 	var totalPayments = paymentsPerYear * years;
 	var discountFactor = (Math.pow(1+periodInterest, totalPayments) - 1) /(periodInterest * Math.pow(1+periodInterest, totalPayments));
 
 	document.getElementById("paymentPrice").innerHTML = roundToAtMost(amount/discountFactor, 2);
+	}
+}
 
+function calculateQuadratic(){
+	var a = document.getElementById("AValue").value;
+	var b = document.getElementById("BValue").value;
+	var c = document.getElementById("CValue").value;
+
+	try{
+		var result = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);     
+		var result2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a); 
+
+		document.getElementById("Answer1").innerHTML = result;
+		document.getElementById("Answer2").innerHTML = result2;
+	}
+	catch(err){
+		document.getElementById("Answer1").innerHTML = "No Answer For This Equation";
+		document.getElementById("Answer2").innerHTML = "";
+	}
+	
 }
 
 

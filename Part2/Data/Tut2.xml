@@ -5,7 +5,7 @@
 		<Header>Javascript Files</Header>
 		<IMGPath>IMG/javascriptInclude.png</IMGPath>
 		<Explanation>
-			Javascript code can be placed at the top of an HTML file or can be included as a seperate file. As the image setting the script tag with a path attribute allows your html page to include a javascript file. This will allow you to use any calls in that javascript file in your html code.
+			Javascript code can be placed at the top of an HTML file or can be included as a seperate file. Setting the script tag with a path attribute allows your html page to include a javascript file. This will allow you to use any calls in that javascript file in your html code.
 		</Explanation>
 	</Section>
 	<Section Type="List">
@@ -15,7 +15,7 @@
 			<Item>Javascript like many other languages is case sensitive</Item>
 			<Item>The interpreter often reports a syntax error not on the line it occurs, be sure to investigate carefully when fixing sytax errors</Item>
 			<Item>The "==" operator is used for comparison whilst the "=" operator is used for assignment</Item>
-			<Item>Indent your code at different levels, ie each time you go into an if/for/while/switch be sure to indent to allow the statement to stand out from prior level</Item>
+			<Item>Indent your code at different levels, specifically each time you go into an if/for/while/switch be sure to indent to allow the statement to stand out from prior level</Item>
 		</ListItems>
 		<Conclusion> These tips will help your javascript code to be easier to understand and less buggy.</Conclusion>
 	</Section>
@@ -31,10 +31,10 @@
 	<Header>Ways to return from a function:</Header>
 		<ListItems>
 			<Item>Reaching the end of the function</Item>
-			<Item>executing a line with the "Return" statement</Item>
+			<Item>Executing a line with the "Return" statement</Item>
 			<Item>Excecuting a line with "Return [expression]" statment</Item>
 		</ListItems>
-		<Conclusion> Not returning a statement from a function that expects an return expression is a logic error.</Conclusion>
+		<Conclusion> Not returning from a function that expects a return expression is a logic error.</Conclusion>
 	</Section>
 	<Section Type="FigureExplanation">
 		<Header>Arrays</Header>

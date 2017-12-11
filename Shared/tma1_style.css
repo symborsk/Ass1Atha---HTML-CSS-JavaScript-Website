@@ -293,6 +293,21 @@ canvas {
     width:100px;
 }
 
+.quadraticPanel {
+    width: 80%;
+    height: 400px;
+    border: solid;
+    border-color: #C0B283;
+    overflow: hidden;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
 html {
     height: 100%;
 }

@@ -3,7 +3,6 @@ var xsltProcessor = new XSLTProcessor();
 function registerNavigationPane()
 {
 	document.getElementById("resume").addEventListener("click", onClick_Resume, false);
-	document.getElementById("home").addEventListener("click", onClick_Home, false);
 }
 
 function handlerRecievedXSL(){
@@ -51,8 +50,17 @@ function tranformXML(xmlDoc)
 	 document.getElementById("contentWindow").appendChild(fragment);
 }
 
+function clearContentWindow(){
+	var content = document.getElementById("contentWindow")
+	while (content.hasChildNodes()) 
+	{
+    	content.removeChild(content.lastChild);
+	}
+}
+
 function onClick_Resume()
 {
+	clearContentWindow();
 	getXSL();
 	
 	var header = document.getElementById("header");
@@ -76,38 +84,37 @@ function onClick_Resume()
 
 }
 
-function onClick_Home()
-{
-	var header = document.getElementById("header");
-	var content = document.getElementById("contentWindow")
-	while (header.hasChildNodes()) 
-	{
-    	header.removeChild(header.lastChild);
-	}
-	while (content.hasChildNodes()) 
-	{
-    	content.removeChild(content.lastChild);
-	}
+// function onClick_Home()
+// {
+// 	var header = document.getElementById("header");
+// 	var content = document.getElementById("contentWindow")
+// 	while (header.hasChildNodes()) 
+// 	{
+//     	header.removeChild(header.lastChild);
+// 	}
+// 	while (content.hasChildNodes()) 
+// 	{
+//     	content.removeChild(content.lastChild);
+// 	}
 
-	var header1 = document.createElement("h1");
-	var header2 = document.createElement("h2");
-	var header3 = document.createElement("h3");
-	var header4 = document.createElement("h4");
-	header1.appendChild( document.createTextNode("Assignment #1 COMP 466"))
-	header2.appendChild( document.createTextNode("Advanced Technologies for Web-Based Systems"))
-	header3.appendChild( document.createTextNode("John Symborski, 33339305"))
-	header4.appendChild( document.createTextNode("July 23rd 2017 - TBD  Hours Spent: TBD"))
+// 	var header1 = document.createElement("h1");
+// 	var header2 = document.createElement("h2");
+// 	var header3 = document.createElement("h3");
+// 	var header4 = document.createElement("h4");
+// 	header1.appendChild( document.createTextNode("Assignment #1 COMP 466"))
+// 	header2.appendChild( document.createTextNode("Advanced Technologies for Web-Based Systems"))
+// 	header3.appendChild( document.createTextNode("John Symborski, 33339305"))
+// 	header4.appendChild( document.createTextNode("July 23rd 2017 - TBD  Hours Spent: TBD"))
 
-	header.appendChild(header1);
-	header.appendChild(header2);
-	header.appendChild(header3);
-	header.appendChild(header4);
+// 	header.appendChild(header1);
+// 	header.appendChild(header2);
+// 	header.appendChild(header3);
+// 	header.appendChild(header4);
 
-	var att = document.createAttribute("class")
-	att.value="active"
-	document.getElementById("resume").removeAttribute("class")
-	document.getElementById("home").setAttributeNode(att)
-
-}
+// 	var att = document.createAttribute("class")
+// 	att.value="active"
+// 	document.getElementById("resume").removeAttribute("class")
+// 	document.getElementById("home").setAttributeNode(att)
+// }
 
 window.addEventListener("load", registerNavigationPane, false)

@@ -1,30 +1,29 @@
 <div class="convertPanel">
 	<h5> Area Conversion</h5>
-	<input type="text" id="conversionText">
+	<input type="text" onchange="convertValue()" id="conversionText">
 	<h5 id="answerconversion"></h5>
-	<input type="button" id="convertBtn" onclick="convertValue()" value="Convert">
 	<div class="inlineHeaders">
 		<span style="margin-right:200px"><h5>From: </h5></span>
 		<span style ="margin-left:200px"><h5>To: </h5></span>
 	</div>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="cm2">cm<sup>2</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="cm2">cm<sup>2</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="cm2">cm<sup>2</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="cm2">cm<sup>2</sup></span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="m2">m<sup>2</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="m2">m<sup>2</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="m2">m<sup>2</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="m2">m<sup>2</sup></span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="yard2">yard<sup>2</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="yard2">yard<sup>2</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="yard2">yard<sup>2</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="yard2">yard<sup>2</sup></span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="acre">acre</span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="acre">acre</span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="acre">acre</span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="acre">acre</span>
 	</div><br>
 	<div class="inlineRadio">
-		 <span><input type="radio" name="From" value="foot2">foot<sup>2</sup></span>
-		 <span style ="margin-left:400px"><input type="radio" name="To" value="foot2">foot<sup>2</sup></span>
+		 <span><input type="radio" name="From" onchange="convertValue()" value="foot2">foot<sup>2</sup></span>
+		 <span style ="margin-left:400px"><input type="radio" name="To" onchange="convertValue()" value="foot2">foot<sup>2</sup></span>
 	</div>
 </div>
